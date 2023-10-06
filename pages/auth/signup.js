@@ -38,7 +38,7 @@ const SignupPage = () => {
 
       if (response.status === 201) {
         alert('Account Created!!')
-        window.location.href = "https://astha114.github.io/weather-bot/auth/login";
+        window.location.href = "/auth/login";
       } else {
         alert('Username already in use!')
         console.error("Error while signing up:", response.statusText);

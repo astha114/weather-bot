@@ -33,7 +33,7 @@ const LoginPage = () => {
       if (response.status === 200) {
         const { token } = await response.json();
         localStorage.setItem("authToken", token);
-        window.location.href = "https://astha114.github.io/weather-bot/dashboard";
+        window.location.href = "/dashboard";
       } 
       else if (response.status === 401) {
         alert("Incorrect password");
@@ -50,11 +50,10 @@ const LoginPage = () => {
     }
   };
 
-  const handleGoogleLogin = (e)=>{
-    e.preventDefault()
+  const handleGoogleLogin = ()=>{
     signIn('google')
-    const userEmail = 'gmail'
-    localStorage.setItem("authToken", userEmail);
+    // const userEmail = 'gmail'
+    // localStorage.setItem("authToken", userEmail);
   }
 
   return (
@@ -96,14 +95,14 @@ const LoginPage = () => {
           <button
               type="button"
               className="btn btn-dark btn-block"
-              onClick={(e)=>handleGoogleLogin(e)}
+              onClick={()=>signIn("google",{callbackUrl: '/dashboard'})}
             >
               Sign in with Google
           </button>
         </div>
         
       </form>
-    <div className="m-2">Do not have acoount? <Link href="https://astha114.github.io/weather-bot/auth/signup">Register</Link></div>
+    <div className="m-2">Do not have acoount? <Link href="/auth/signup">Register</Link></div>
     </div>
   </div>
   );
