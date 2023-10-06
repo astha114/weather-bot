@@ -16,7 +16,7 @@ const SignupPage = () => {
   };
 
  const handleGoogleSignup = ()=>{
-    signIn('google',{ callbackUrl: '/dashboard' })
+    signIn('google',{ callbackUrl: 'https://astha114.github.io/weather-bot/dashboard' })
     const userEmail = 'gmail'
     localStorage.setItem("authToken", userEmail);
  }
@@ -38,7 +38,7 @@ const SignupPage = () => {
 
       if (response.status === 201) {
         alert('Account Created!!')
-        window.location.href = "/auth/login";
+        window.location.href = "https://astha114.github.io/weather-bot/auth/login";
       } else {
         alert('Username already in use!')
         console.error("Error while signing up:", response.statusText);
