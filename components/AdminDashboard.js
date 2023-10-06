@@ -7,28 +7,28 @@ import {useSession, signIn} from 'next-auth/react'
 
 const AdminDashboard = () => {
   const { data: session } = useSession();
-  const save = async ()=>{
-    if (session) {
-      const username = session.user.email
-      const response = await fetch("https://weather-bot-qy9g.onrender.com/api/googleSignup", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            username,
-            username,
-          }),
-        });
+  // const save = async ()=>{
+  //   if (session) {
+  //     const username = session.user.email
+  //     const response = await fetch("https://weather-bot-qy9g.onrender.com/api/googleSignup", {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify({
+  //           username,
+  //           username,
+  //         }),
+  //       });
 
-        if (response.status === 200) {
-          console.log('saved user')
-        }
-      console.log('Logged-in user email:', session.user);
-    }
+  //       if (response.status === 200) {
+  //         console.log('saved user')
+  //       }
+  //     console.log('Logged-in user email:', session.user);
+  //   }
     
-  }
-  save();
+  // }
+  // save();
   return (
      <PrivateRoute>
       <div className="container py-4">
