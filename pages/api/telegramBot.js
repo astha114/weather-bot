@@ -10,9 +10,9 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 const { getApiKeysFromDatabase } = require('./getKey');
-const User = require('../models/User')
-const Admin = require('../models/Admin')
-const ApplicationSettings = require('../models/ApplicationSettings')
+const User = require('../../models/User')
+const Admin = require('../../models/Admin')
+const ApplicationSettings = require('../../models/ApplicationSettings')
 const db = require('../api/db');
 
 const app = express();
