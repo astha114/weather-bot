@@ -30,7 +30,7 @@ const AdminDashboard = () => {
   }
   save();
   return (
-    //  <PrivateRoute>
+     <PrivateRoute>
       <div className="container py-4">
         <header className="text-center">
           <h1>Welcome to the Admin Dashboard</h1>
@@ -57,7 +57,7 @@ const AdminDashboard = () => {
           <p>&copy; {new Date().getFullYear()} Your Company Name</p>
         </footer>
       </div>
-      // </PrivateRoute>
+      </PrivateRoute>
   );
 };
 
