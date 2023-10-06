@@ -8,7 +8,7 @@ const PrivateRoute = ({ children }) => {
     const authToken = localStorage.getItem("authToken");
 
     if (!authToken) {
-      router.push("https://astha114.github.io/weather-bot/auth/login");
+      router.push("/auth/login");
     }
   }, []);
 
