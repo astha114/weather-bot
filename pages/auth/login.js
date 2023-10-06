@@ -52,8 +52,8 @@ const LoginPage = () => {
 
   const handleGoogleLogin = ()=>{
     signIn('google')
-    // const userEmail = 'gmail'
-    // localStorage.setItem("authToken", userEmail);
+    const userEmail = 'gmail'
+    localStorage.setItem("authToken", userEmail);
   }
 
   return (
