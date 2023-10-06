@@ -52,7 +52,7 @@ const LoginPage = () => {
 
   const handleGoogleLogin = (e)=>{
     e.preventDefault()
-    signIn('google',{ callbackUrl: 'https://astha114.github.io/weather-bot/dashboard' })
+    signIn('google')
     const userEmail = 'gmail'
     localStorage.setItem("authToken", userEmail);
   }
