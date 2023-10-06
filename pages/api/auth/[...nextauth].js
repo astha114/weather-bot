@@ -10,6 +10,6 @@ export default NextAuth({
     ],
     baseUrl: 'https://astha114.github.io/weather-bot', 
     secret: '234aa4890565099b1f697a2982e6650e',
-    // debug: true,
+    debug: true,
   
 })
