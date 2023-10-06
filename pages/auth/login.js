@@ -33,7 +33,7 @@ const LoginPage = () => {
       if (response.status === 200) {
         const { token } = await response.json();
         localStorage.setItem("authToken", token);
-        window.location.href = "/dashboard";
+        window.location.href = "https://astha114.github.io/weather-bot/dashboard";
       } 
       else if (response.status === 401) {
         alert("Incorrect password");
