@@ -50,7 +50,8 @@ const LoginPage = () => {
     }
   };
 
-  const handleGoogleLogin = ()=>{
+  const handleGoogleLogin = (e)=>{
+    e.preventDefault()
     signIn('google',{ callbackUrl: 'https://astha114.github.io/weather-bot/dashboard' })
     const userEmail = 'gmail'
     localStorage.setItem("authToken", userEmail);
@@ -95,7 +96,7 @@ const LoginPage = () => {
           <button
               type="button"
               className="btn btn-dark btn-block"
-              onClick={()=>handleGoogleLogin()}
+              onClick={(e)=>handleGoogleLogin(e)}
             >
               Sign in with Google
           </button>
