@@ -102,7 +102,7 @@ const LoginPage = () => {
         </div>
         
       </form>
-    <div className="m-2">Do not have acoount? <Link href="/auth/signup">Register</Link></div>
+    <div className="m-2">Do not have acoount? <Link href="https://astha114.github.io/weather-bot/auth/signup">Register</Link></div>
     </div>
   </div>
   );
