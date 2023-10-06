@@ -8,6 +8,7 @@ export default NextAuth({
             clientSecret: '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'
         }),
     ],
+    baseUrl: 'https://astha114.github.io/weather-bot', 
     secret: '234aa4890565099b1f697a2982e6650e',
     // debug: true,
   
