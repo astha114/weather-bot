@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {signIn, useSession} from 'next-auth/react'
+import Link from 'next/link';
 
 const SignupPage = () => {
   const [formData, setFormData] = useState({
@@ -95,7 +96,7 @@ const SignupPage = () => {
          
 
         </form>
-        <div className="m-2">Already have an acoount? <a href="/auth/login">Login</a></div>
+        <div className="m-2">Already have an acoount? <Link href="/auth/login">Login</Link></div>
       </div>
     </div>
   );
