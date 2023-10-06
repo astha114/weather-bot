@@ -51,7 +51,7 @@ const LoginPage = () => {
   };
 
   const handleGoogleLogin = ()=>{
-    signIn('google')
+    signIn("google",{callbackUrl: '/dashboard'})
     const userEmail = 'gmail'
     localStorage.setItem("authToken", userEmail);
   }
@@ -95,7 +95,7 @@ const LoginPage = () => {
           <button
               type="button"
               className="btn btn-dark btn-block"
-              onClick={()=>signIn("google",{callbackUrl: '/dashboard'})}
+              onClick={()=>handleGoogleLogin()}
             >
               Sign in with Google
           </button>
